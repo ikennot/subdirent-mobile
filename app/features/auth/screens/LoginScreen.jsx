@@ -3,7 +3,8 @@ import  {View, StyleSheet,Image} from "react-native";
 import Logo from '@/assets/app-assets/logo.png'
 import LogoName from '@/assets/app-assets/logo-subdirent.png'
 import Button from "../components/button";
-import ForgotPasswordLink from "../components/forgotPasswordLink";
+import { Link } from "expo-router";
+
 export default function LoginScreen(){
     return(
     <View style = {styles.LoginScreen}>
@@ -15,7 +16,7 @@ export default function LoginScreen(){
         title="LOGIN"
         onPress={() => console.log("Button pressed")}
       />
-           <ForgotPasswordLink title="Forgot password?" url="https://example.com/reset" />
+           <Link href="/features/auth/screens/ForgotPasswordScreen">Forgot password?</Link>
 
     </View>)
 
