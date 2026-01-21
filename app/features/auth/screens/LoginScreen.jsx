@@ -12,7 +12,7 @@ export default function LoginScreen(){
         <Input placeholder = "Enter your email"/>
          <Input placeholder = "Enter your password" secureTextEntry/>
           <Button
-        title="Login"
+        title="LOGIN"
         onPress={() => console.log("Button pressed")}
       />
            <ForgotPasswordLink title="Forgot password?" url="https://example.com/reset" />
@@ -27,7 +27,8 @@ const styles = StyleSheet.create({
     LoginScreen:{
    flex:1,
    justifyContent: 'center',
-   gap: 20
+   gap: 20,
+   alignItems:'center'
     },
     logo: {
         width: 100,
