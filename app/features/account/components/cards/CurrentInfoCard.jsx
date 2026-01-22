@@ -1,7 +1,7 @@
 import React from 'react';
 // 1. Add 'Dimensions' to the import list
-import { View, Text, StyleSheet, Dimensions } from 'react-native';
-
+import { View, Text, StyleSheet, Dimensions ,Image} from 'react-native';
+import HouseLogo from '@/assets/app-assets/house.png'
 const { width: screenWidth } = Dimensions.get("window");
 
 export default function CurrentInfoCard(props) {
@@ -10,7 +10,11 @@ export default function CurrentInfoCard(props) {
         <View style={styles.sampleContainer}/>
      
         <View style ={styles.innerContainer}>
-        <Text style={styles.Header}>CURRENT UNIT</Text>
+        <View style={styles.HeaderView}>
+        <Image source={HouseLogo} style={{width:15, height:15}}/>
+     <Text style={styles.Header}>CURRENT UNIT</Text>
+        </View>
+      
         <Text style={styles.textColor}>
           Unit: <Text style={styles.boldText}>{props.unit}</Text>
         </Text>
@@ -61,6 +65,11 @@ const styles = StyleSheet.create({
     
   },
 
+  HeaderView:{
+    flexDirection:'row',
+    alignItems:'center',
+    paddingBottom: 10
+  },
   Header:{
     fontWeight: 'bold',
     fontSize:14
