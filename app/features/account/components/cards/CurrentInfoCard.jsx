@@ -3,14 +3,17 @@ import React from 'react';
 import { View, Text, StyleSheet, Dimensions ,Image} from 'react-native';
 import HouseLogo from '@/assets/app-assets/house.png'
 import Avatar from '@/assets/app-assets/account/profile.png'
+import ShitLine from '@/assets/app-assets/account/shitLine.png'
 const { width: screenWidth } = Dimensions.get("window");
 
 export default function CurrentInfoCard(props) {
     return (
         <View style={styles.container}>
+         <Image source={ShitLine} style={styles.ShitLine}/>
         <View style={styles.innerContainer1}>
         <Image source={Avatar} style={styles.avatar}/>
-          <Text style={styles.Header}>Kenneth Domdom</Text>
+     <Text style={styles.Header}>{props.name ?? "Kenneth Domdom"}</Text>
+
            <Text>Tenant</Text>
           </View>
         <View style ={styles.innerContainer2}>
@@ -45,7 +48,8 @@ const styles = StyleSheet.create({
         borderRadius: 10,
          elevation: 5,
         flexDirection:'row',
-        justifyContent:'space-around'
+        justifyContent:'space-around',
+        position:'relative'
     },
    innerContainer1:{
     flex: 1,
@@ -93,5 +97,11 @@ const styles = StyleSheet.create({
     height: 70,
     borderRadius: 35,
     alignSelf:'center'
+  },
+  ShitLine:{
+       position: "absolute",
+      top: 15,
+      right: 145,
+      height:120
   }
 });
