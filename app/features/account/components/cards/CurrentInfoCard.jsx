@@ -68,7 +68,8 @@ const styles = StyleSheet.create({
   HeaderView:{
     flexDirection:'row',
     alignItems:'center',
-    paddingBottom: 10
+    paddingBottom: 10,
+    gap:10
   },
   Header:{
     fontWeight: 'bold',
