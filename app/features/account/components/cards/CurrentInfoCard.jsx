@@ -2,19 +2,23 @@ import React from 'react';
 // 1. Add 'Dimensions' to the import list
 import { View, Text, StyleSheet, Dimensions ,Image} from 'react-native';
 import HouseLogo from '@/assets/app-assets/house.png'
+import Avatar from '@/assets/app-assets/account/profile.png'
 const { width: screenWidth } = Dimensions.get("window");
 
 export default function CurrentInfoCard(props) {
     return (
         <View style={styles.container}>
-        <View style={styles.sampleContainer}/>
-     
-        <View style ={styles.innerContainer}>
+        <View style={styles.innerContainer1}>
+        <Image source={Avatar} style={styles.avatar}/>
+          <Text style={styles.Header}>Kenneth Domdom</Text>
+           <Text>Tenant</Text>
+          </View>
+        <View style ={styles.innerContainer2}>
         <View style={styles.HeaderView}>
         <Image source={HouseLogo} style={{width:15, height:15}}/>
      <Text style={styles.Header}>CURRENT UNIT</Text>
         </View>
-      
+         
         <Text style={styles.textColor}>
           Unit: <Text style={styles.boldText}>{props.unit}</Text>
         </Text>
@@ -43,7 +47,15 @@ const styles = StyleSheet.create({
         flexDirection:'row',
         justifyContent:'space-around'
     },
-   innerContainer:{
+   innerContainer1:{
+    flex: 1,
+    flexDirection:'column',
+    justifyContent: "center", // vertical (main axis)
+    alignItems: "center",     // horizontal (cross axis)
+    padding:10
+   },
+
+    innerContainer2:{
     flex: 1,
     flexDirection:'column',
     justifyContent: "center", // vertical (main axis)
@@ -74,5 +86,12 @@ const styles = StyleSheet.create({
   Header:{
     fontWeight: 'bold',
     fontSize:14
+  },
+
+  avatar:{
+     width: 70,
+    height: 70,
+    borderRadius: 35,
+    alignSelf:'center'
   }
 });
