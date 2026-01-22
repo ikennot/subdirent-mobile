@@ -5,7 +5,7 @@ import CurrentInfoCard from "../components/cards/CurrentInfoCard";
 export default function Account(){
     return (
         <View style={styles.Screen} > 
-          <CurrentInfoCard/>
+          <CurrentInfoCard unit="unit1" Location="Phase 1" price = {10000}/>
         </View>
     )
 }

@@ -4,12 +4,23 @@ import { View, Text, StyleSheet, Dimensions } from 'react-native';
 
 const { width: screenWidth } = Dimensions.get("window");
 
-export default function CurrentInfoCard() {
+export default function CurrentInfoCard(props) {
     return (
         <View style={styles.container}>
-            <View style={styles.innerContainer}/>
+        <View style={styles.sampleContainer}/>
      
-            <View style={styles.innerContainer2}/>
+        <View style ={styles.innerContainer}>
+        <Text style={styles.Header}>CURRENT UNIT</Text>
+        <Text style={styles.textColor}>
+          Unit: <Text style={styles.boldText}>{props.unit}</Text>
+        </Text>
+        <Text style={styles.textColor}>
+          Location: <Text style={styles.boldText}>{props.Location}</Text>
+        </Text>
+        <Text style={styles.textColor}>
+          Price: <Text style={styles.boldText}>{props.price}</Text>
+        </Text>
+        </View>
 
           
 
@@ -28,12 +39,30 @@ const styles = StyleSheet.create({
         flexDirection:'row',
         justifyContent:'space-around'
     },
-    innerContainer:{
-        flex : 1,
-      backgroundColor: '#081824',
+   innerContainer:{
+    flex: 1,
+    flexDirection:'column',
+    justifyContent: "center", // vertical (main axis)
+    alignItems: "flex-start",     // horizontal (cross axis)
+    padding:10
+   },
+   sampleContainer:{
+    flex:1,
+     backgroundColor: '#122b3e',
+
+   },
+
+    textColor:{
+    color:'#808080'
     },
-      innerContainer2:{
-        flex : 1,
-      backgroundColor: '#215175',
-    }
+
+     boldText: {
+    fontWeight: 'bold',
+    
+  },
+
+  Header:{
+    fontWeight: 'bold',
+    fontSize:14
+  }
 });
