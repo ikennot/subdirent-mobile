@@ -1,12 +1,13 @@
 import  {View, StyleSheet,Image,Text} from "react-native";
-import CurrentInfoCard from "../components/cards/CurrentInfoCard";
-
+import CurrentInfoCard from "../components/cards/CurrentInfoCard"
+import Infos from "../components/cards/Infos";
 
 export default function Account(){
     return (
         <View style={styles.Screen} > 
           <CurrentInfoCard unit="unit1" Location="Phase 1" price = {10000}/>
           <Text style={styles.personalInfoText}>Personal Information</Text>
+          <Infos/>
         </View>
     )
 }
@@ -25,6 +26,6 @@ const styles = StyleSheet.create({
     personalInfoText:{
         alignSelf: 'flex-start', // <--- this moves it to left side
         marginHorizontal:10,
-        flex:1
+      
     }
 })
