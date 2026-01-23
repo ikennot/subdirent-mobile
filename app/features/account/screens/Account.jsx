@@ -6,7 +6,7 @@ export default function Account(){
     return (
         <View style={styles.Screen} > 
           <CurrentInfoCard unit="unit1" Location="Phase 1" price = {10000}/>
-          <Text>Personal Information</Text>
+          <Text style={styles.personalInfoText}>Personal Information</Text>
         </View>
     )
 }
@@ -18,6 +18,13 @@ const styles = StyleSheet.create({
    flex:1,
    justifyContent: 'center',
    gap: 20,
-   alignItems:'center'
-       }
+   alignItems:'center',
+    marginHorizontal:20,
+    marginVertical:30
+       },
+    personalInfoText:{
+        alignSelf: 'flex-start', // <--- this moves it to left side
+        marginHorizontal:10,
+        flex:1
+    }
 })
