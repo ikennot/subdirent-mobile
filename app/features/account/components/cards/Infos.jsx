@@ -19,7 +19,7 @@ export default function Infos(props) {
        <View style={[styles.innerContainer, { width: '75%' }]}>
         <UnderLinedInput style={styles.input} placeholder="Address" label ="Address" />
       </View>
-       <View style={[styles.innerContainer,{width:'100%'}]}>
+       <View style={[styles.buttonContainer,{width:'100%'}]}>
     
       <Button/>
       </View>
@@ -48,5 +48,12 @@ const styles = StyleSheet.create({
     flex: 1,             // <-- bawat input mag-a-occupy ng pantay
     marginRight: 10,     // <-- gap sa pagitan
   },
+
+  buttonContainer:{
+     flexDirection: 'row',
+     justifyContent:'flex-end',
+    alignItems: 'center',
+
+  }
   
 });

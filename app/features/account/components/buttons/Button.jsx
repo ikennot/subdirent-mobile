@@ -10,7 +10,8 @@ export default function Button({label = 'EDIT',color = '#5AB8F0',width ='60',hei
     height:height,
     justifyContent:'center',
     alignItems:'center',
-      borderRadius: 5,
+    borderRadius: 5,
+    marginHorizontal:'2'
 
   }}> 
     <Text style={{color:'white',fontSize:10}}>{label}</Text>
