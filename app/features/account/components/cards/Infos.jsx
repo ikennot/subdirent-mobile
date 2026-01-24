@@ -11,7 +11,7 @@ export default function Infos(props) {
         <UnderLinedInput style={styles.input} placeholder="Last Name" label ="Last Name" />
           <UnderLinedInput style={styles.input} placeholder="M.I" label ="M.I." />
       </View>
-   <View style={[styles.innerContainer, { width: '50%' }]}>
+      <View style={[styles.innerContainer, { width: '50%' }]}>
         <UnderLinedInput style={styles.input} placeholder="Phone number" label="Phone number"/>
         <UnderLinedInput style={styles.input} placeholder="Email Address" label ="Email Address" />
       </View>
