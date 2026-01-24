@@ -1,43 +1,44 @@
 import React from 'react';
 import { View, Text, TextInput, StyleSheet } from 'react-native';
 
-export default function UnderLinedInut(props){
-    return(
-        <View>
-         <Text style={styles.label}>
-        {props.label ?? 'AKO'}
-      </Text>
+export default function UnderLinedInput(props) {
+  const displayValue = props.value ? props.value : ''; // kung may value, ipakita; kung wala, empty para lumabas placeholder
+
+  return (
+    <View style={styles.container}>
+      <Text style={styles.label}>{props.label ?? 'First Name'}</Text>
+      
       <TextInput
-        style={[styles.input, style]} // Pinapayagan ang override styles kung kailangan
-        value={value}
-        placeholder={placeholder}
-        placeholderTextColor="#ccc" // Light gray kung walang laman
-        editable={false} // Gawing 'true' kung gusto mong na-e-edit
+        style={styles.input}
+        value={displayValue}
+        placeholder={props.value ? '' : props.placeholder ?? 'Enter name'} // placeholder lang kung walang value
+        placeholderTextColor="#747474"
+        editable={false} // read-only
       />
-        </View>
-    )
+    </View>
+  );
 }
 
-
 const styles = StyleSheet.create({
-    container: {
-    marginBottom: 20,
-    width: '100%',     
+  container: {
+    marginBottom: 10,
+    paddingRight:20,
+    width: '100%',
   },
   label: {
-    fontSize: 12,              // Maliit na font size tulad sa image
-    fontWeight: 'bold',        // Bold text
-    color: '#000000',          // Pure Black label
-    textTransform: 'uppercase',// Automatic na gagawing ALL CAPS
-    marginBottom: 5,           // Space sa pagitan ng Label at Input
+    fontSize: 12,
+    fontWeight: 'bold',
+    color: '#000000',
+    textTransform: 'uppercase',
+    marginBottom: 2,
   },
   input: {
-    fontSize: 16,              // Mas malaki ng konti ang sagot
-    fontWeight: 'bold',        // Bold din ang sagot ("AKO")
-    color: '#555555',          // Dark Gray text
-    textAlign: 'center',       // GITNA ang text
-    borderBottomWidth: 1,      // Ang guhit sa ilalim
-    borderBottomColor: '#000', // Kulay itim na guhit
-    paddingVertical: 5,        // Padding para hindi dumikit sa guhit
+    fontSize: 10,
+    fontWeight: 'bold',
+    color: '#555555',
+    textAlign: 'center',
+    borderBottomWidth: 1,
+    borderBottomColor: '#000000',
+    paddingVertical: 5,
   },
-})
+});
