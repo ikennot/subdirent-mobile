@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet, Dimensions } from 'react-native';
 const { width: screenWidth } = Dimensions.get("window");
 import UnderLinedInput from '../inputs/UnderlinedInput';
+import Button from '../buttons/Button';
 
 export default function Infos(props) {
   return (
@@ -17,6 +18,10 @@ export default function Infos(props) {
       </View>
        <View style={[styles.innerContainer, { width: '75%' }]}>
         <UnderLinedInput style={styles.input} placeholder="Address" label ="Address" />
+      </View>
+       <View style={[styles.innerContainer,{width:'100%'}]}>
+    
+      <Button/>
       </View>
     </View>
   );
@@ -43,4 +48,5 @@ const styles = StyleSheet.create({
     flex: 1,             // <-- bawat input mag-a-occupy ng pantay
     marginRight: 10,     // <-- gap sa pagitan
   },
+  
 });
