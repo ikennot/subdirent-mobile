@@ -1,5 +1,19 @@
-import LoginScreen from './features/auth/screens/LoginScreen';
+import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 
-// In an Expo Router setup, the default export of app/index.jsx is the app's initial screen.
-// By exporting LoginScreen directly, it becomes the root of the application.
-export default LoginScreen;
+import LoginScreen from './features/auth/screens/LoginScreen';
+import Account from './features/account/screens/Account';
+
+// This file is the ENTRY SCREEN for Expo Router
+// Whatever you export here becomes the first screen
+
+export default function Index() {
+  return (
+    <SafeAreaProvider>
+      <SafeAreaView style={{ flex: 1 }}>
+        {/* Palitan mo lang kung alin ang gusto mong first screen */}
+        {/* <LoginScreen /> */}
+        <Account />
+      </SafeAreaView>
+    </SafeAreaProvider>
+  );
+}
