@@ -2,6 +2,7 @@ import  {View, StyleSheet,Image,Text} from "react-native";
 import CurrentInfoCard from "../components/cards/CurrentInfoCard"
 import Infos from "../components/cards/Infos";
 import ProfilePicker from "../components/cards/ProfilePicker";
+import SecuritySettings from "../components/cards/SecuritySettings";
 export default function Account(){
     return (
         <View style={styles.Screen} > 
@@ -9,6 +10,7 @@ export default function Account(){
           <Text style={styles.personalInfoText}>Personal Information</Text>
           <Infos/>
           <ProfilePicker/>
+          <SecuritySettings/>
         </View>
     )
 }
@@ -18,7 +20,7 @@ export default function Account(){
 const styles = StyleSheet.create({
        Screen:{
    flex:1,
-   justifyContent: 'center',
+   justifyContent: 'flex-start',
    gap: 20,
    alignItems:'center',
     marginHorizontal:20,

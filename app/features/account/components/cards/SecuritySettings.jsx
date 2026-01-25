@@ -1,18 +1,28 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, TouchableOpacity,Dimensions } from 'react-native';
 const { width: screenWidth } = Dimensions.get("window");
-import ProfilePickerButton from '../buttons/ProfilePickerButton'
-import * as ImagePicker from 'expo-image-picker';
-
-export default function ProfilePicker(){
+import Button from '../buttons/Button';
+export default function SecuritySettings(){
     return (
-        <View style={styles.container}>
-         <Text style={{fontSize:12}}>Update Profile Photo</Text>
-         <ProfilePickerButton/>
-        </View>
-    )
-}
+                <View style={styles.container}>
+         <Text style={{fontSize:12}}>Security Settings</Text>
+       <Button
+  label="CHANGE"
+  color="#F3F3F3"
+  width={60}
+  height={20}
+  style={{ borderColor: '#C0B4B4', borderWidth: 1 }}
+  textStyle={{ color: 'black' }}
+/>
 
+        </View>
+
+
+    )
+
+    
+
+}
 
 
 const styles = StyleSheet.create({
@@ -23,7 +33,6 @@ const styles = StyleSheet.create({
     alignItems:'center',
     flexDirection:'row',
     padding:10,
-
-    
+    marginTop:-20
     }
 })

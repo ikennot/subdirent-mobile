@@ -1,20 +1,32 @@
 import React from 'react';
-import { Pressable, Text, StyleSheet } from 'react-native';
+import { Pressable, Text } from 'react-native';
 
-
-export default function Button({label = 'EDIT',color = '#5AB8F0',width ='60',height='20',}){
-    return (
-  <Pressable style={{
-    backgroundColor:color,
-    width:width,
-    height:height,
-    justifyContent:'center',
-    alignItems:'center',
-    borderRadius: 5,
-    marginHorizontal:'2'
-
-  }}> 
-    <Text style={{color:'white',fontSize:10}}>{label}</Text>
-  </Pressable>
-    )
+export default function Button({
+  label = 'EDIT',
+  color = '#5AB8F0',
+  width = 60,
+  height = 20,
+  style,
+  textStyle,
+}) {
+  return (
+    <Pressable
+      style={[
+        {
+          backgroundColor: color,
+          width,
+          height,
+          justifyContent: 'center',
+          alignItems: 'center',
+          borderRadius: 5,
+          marginHorizontal: 2,
+        },
+        style,
+      ]}
+    >
+      <Text style={[{ fontSize: 10, color: 'white' }, textStyle]}>
+        {label}
+      </Text>
+    </Pressable>
+  );
 }
