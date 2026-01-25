@@ -1,9 +1,9 @@
-c
-
+import  {View, StyleSheet,Image,Text} from "react-native";
+import Modules from "./buttons/Modules";
 export default function AppNavigator(){
   return (
         <View style={styles.container}>
-            <Text>Niggaa</Text>
+          <Modules/>
         </View>
     )
 }
