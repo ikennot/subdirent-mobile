@@ -4,16 +4,17 @@ import Infos from "../components/cards/Infos";
 import ProfilePicker from "../components/cards/ProfilePicker";
 import SecuritySettings from "../components/cards/SecuritySettings";
 import LogoutView from "../components/cards/LogoutView";
+import { SafeAreaView } from 'react-native-safe-area-context';
 export default function Account(){
     return (
-        <View style={styles.Screen} > 
+        <SafeAreaView style={styles.Screen} > 
           <LogoutView/>
           <CurrentInfoCard unit="unit1" Location="Phase 1" price = {10000}/>
           <Text style={styles.personalInfoText}>Personal Information</Text>
           <Infos/>
           <ProfilePicker/>
           <SecuritySettings/>
-        </View>
+        </SafeAreaView>
     )
 }
 
