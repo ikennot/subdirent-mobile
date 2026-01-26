@@ -1,12 +1,12 @@
-import { Pressable, StyleSheet, Image, Text } from "react-native";
+import { Pressable, StyleSheet, Image, Text ,View} from "react-native";
 import Dashboard from '../../../../assets/navigation-assets/dashboard.png';
 
 export default function Modules({ image, label }) {
   return (
-    <Pressable style={styles.container}>
+    <View style={styles.container}>
       <Image source={image ?? Dashboard} style={styles.image} />
       <Text style={styles.text}>{label ?? 'DASHBOARD'}</Text>
-    </Pressable>
+    </View>
   );
 }
 
