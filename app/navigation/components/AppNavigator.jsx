@@ -11,12 +11,11 @@ import Profile from '../../../assets/navigation-assets/profile.png';
 export default function AppNavigator(){
   return (
         <View style={styles.container}>
-               <Modules icon={Dashboard} label="Dashboard" />
-      <Modules icon={Property} label="Property" />
-      <Modules icon={Payments} label="Payments" />
-      <Modules icon={Maintenance} label="Maintenance" />
-      <Modules icon={Profile} label="Profile" />
-
+        <Modules image={Dashboard} label="Dashboard" />
+      <Modules image={Property} label="Property" />
+      <Modules image={Payments} label="Payments" />
+      <Modules image={Maintenance} label="Maintenance" />
+      <Modules image={Profile} label="Profile" />
         </View>
     )
 }
