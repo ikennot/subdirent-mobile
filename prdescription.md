@@ -1,77 +1,64 @@
-# Folder Structure
+- PR TITLE: Feat: Account and Authentication
+- What's new in this PR
 
-This document outlines the folder structure of the `subdirent-mobile` application and describes the purpose of each key directory.
+    - Quick Setup (for backend developers and if and only if applicable to frontend developers)
+        - No special setup is required.
 
-```
-C:\Kennethdomdom\subdirent-mobile\
-├───.gitignore           # Specifies intentionally untracked files to ignore by Git.
-├───app.json             # Configuration file for Expo applications.
-├───eslint.config.js     # ESLint configuration for code linting.
-├───expo-env.d.ts        # TypeScript declaration file for Expo environment variables.
-├───folderstructure.md   # (Self-explanatory) Documentation of the project's folder structure.
-├───package-lock.json    # Records the exact dependency tree that was generated.
-├───package.json         # Project metadata and dependency definitions.
-├───README.md            # Project README file.
-├───tsconfig.json        # TypeScript configuration file.
-├───.expo\               # Contains generated files and caches used by Expo.
-│   ├───types\           # TypeScript type definitions for Expo.
-│   │   └───.gitkeep     # Placeholder file for empty directory.
-│   └───web\             # Web-specific configurations and build output for Expo.
-│       └───.gitkeep     # Placeholder file for empty directory.
-├───.git\...             # (Git version control files) Contains all the objects and refs that Git uses to manage the project history.
-├───.vscode\             # Visual Studio Code specific settings.
-│   ├───extensions.json  # Recommended VS Code extensions for the project.
-│   └───settings.json    # Workspace specific VS Code settings.
-├───app\                 # Core application source code.
-│   ├───App.jsx          # Main application component.
-│   ├───index.jsx        # Entry point for the application.
-│   ├───features\        # Contains modules for different features of the application.
-│   │   ├───account\     # Account management feature.
-│   │   │   ├───components\ # Reusable UI components for the account feature.
-│   │   │   ├───hooks\      # Custom React hooks for account-related logic.
-│   │   │   └───screens\    # Screens/pages for the account feature.
-│   │   ├───auth\        # Authentication feature (login, signup, etc.).
-│   │   │   ├───components\ # Reusable UI components for authentication.
-│   │   │   ├───hooks\      # Custom React hooks for authentication logic.
-│   │   │   └───screens\    # Screens/pages for the authentication feature.
-│   │   │       ├───ForgotPassScreen.jsx # Forgot password screen.
-│   │   │       └───LandingScreen.jsx    # Landing screen for authentication.
-│   │   ├───dashboard\   # Dashboard feature.
-│   │   │   ├───components\ # Reusable UI components for the dashboard.
-│   │   │   │   └───CalendarCard.jsx # Calendar card component.
-│   │   │   ├───hooks\      # Custom React hooks for dashboard logic.
-│   │   │   └───screens\    # Screens/pages for the dashboard feature.
-│   │   │       └───DashboardScreen.jsx # Main dashboard screen.
-│   │   ├───maintenance\ # Maintenance feature.
-│   │   │   ├───components\ # Reusable UI components for maintenance.
-│   │   │   ├───hooks\      # Custom React hooks for maintenance logic.
-│   │   │   └───screens\    # Screens/pages for the maintenance feature.
-│   │   ├───payments\    # Payments feature.
-│   │   │   ├───components\ # Reusable UI components for payments.
-│   │   │   ├───hooks\      # Custom React hooks for payments logic.
-│   │   │   └───screens\    # Screens/pages for the payments feature.
-│   │   └───property\    # Property management feature.
-│   │       ├───components\ # Reusable UI components for property.
-│   │       ├───hooks\      # Custom React hooks for property logic.
-│   │       └───screens\    # Screens/pages for the property feature.
-│   └───navigation\      # Contains navigation-related components and configurations.
-│       ├───AppNavigator.jsx # Main application navigator.
-│       └───screensNavigator.jsx # Navigator for specific screens.
-├───assets\              # Static assets like images, fonts, etc.
-│   └───images\          # Image assets used in the application.
-│       ├───android-icon-background.png # Android adaptive icon background.
-│       ├───android-icon-foreground.png # Android adaptive icon foreground.
-│       ├───android-icon-monochrome.png # Android adaptive icon monochrome version.
-│       ├───favicon.png                 # Favicon for web.
-│       ├───icon.png                    # Application icon.
-│       ├───partial-react-logo.png      # Partial React logo image.
-│       ├───react-logo.png              # React logo image.
-│       ├───react-logo@2x.png           # React logo for 2x display density.
-│       ├───react-logo@3x.png           # React logo for 3x display density.
-│       └───splash-icon.png             # Splash screen icon.
-├───constants\           # Contains constant values used throughout the application.
-│   └───theme.ts         # Defines theme-related constants (colors, fonts, etc.).
-├───node_modules\...     # (Third-party dependencies) Directory where npm installs project dependencies.
-└───scripts\             # Utility scripts for the project.
-    └───reset-project.js # Script to reset the project to a clean state.
-```
+    - TL;DR
+        - This PR introduces new features and UI improvements for the Account and Authentication sections of the application. It includes the implementation of the logout functionality, security settings, profile picker, and the forgot password screen.
+
+    - Summary
+        - `e97e199` - Done with Logout (UI only)
+        - `ea04500` - Done with security settings
+        - `0f6fd6b` - Done with profile picker
+        - `88a83ea` - add expo-image-picker
+        - `45a500a` - add expo-document-picker
+        - `ac59d83` - personal info done (no useState)
+        - `2e0cde0` - button
+        - `2181e1b` - add button to Account components
+        - `0ddca40` - Personal information form but no buttons yet
+        - `843e564` - Create UnderLinedInput.jsx
+        - `bf8e3b8` - initial info card design
+        - `54c9d6d` - add some margins
+        - `dce9f6a` - modify index.jsx
+        - `c1165a1` - Done with CurrentInfoCard
+        - `4523db8` - add asset shitLine
+        - `3f93558` - add profile picture asset
+        - `2db7e0f` - Done currentUnit header
+        - `aaec703` - add asset
+        - `7678251` - initial view container
+        - `8c41e10` - testing the Account card with sample text
+        - `832b7fb` - add some assets and some file components
+        - `cc136c3` - Merge pull request #8 from ikennot/feat-forgot-pword
+        - `b0b84bb` - done UI of forgot Password
+        - `9fee12f` - add labels ang text in forgotPassword
+        - `b76c141` - add route to navigate ForgotPasswordScreen
+        - `d65c0c7` - Merge pull request #6 from ikennot/feat-login
+        - `28064b5` - Layout done
+        - `a1ecc29` - initial design
+        - `2b24513` - import components
+        - `f0ab7f1` - Merge pull request #2 from ikennot/feat/folder-structuring
+        - `c6ba317` - create modular folder structure (2)
+        - `b34222d` - create modular folder structure
+        - `ded5bff` - subdirent intialization
+        - `ac39150` - Initial commit
+
+    - Key Features
+        - Logout functionality (UI only)
+        - Security settings UI
+        - Profile picture picker
+        - Forgot password screen and navigation
+        - Personal information form UI
+        - Modular folder structure
+
+    - Technical Changes
+        - Added `expo-image-picker` and `expo-document-picker`
+        - Created several new components, including `UnderlinedInput`, `CurrentInfoCard`, and various buttons.
+        - Implemented navigation for the forgot password screen.
+        - Restructured the project with a modular folder structure.
+
+    - Checklist
+        - [x] Code follows the project's coding style.
+        - [x] All new and existing tests passed.
+        - [x] The feature is working as expected.
+        - [x] The PR has been reviewed by at least one other developer.

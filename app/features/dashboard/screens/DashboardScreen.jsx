@@ -5,6 +5,7 @@ import { Colors } from '../../../../constants/theme';
 // Components
 import CalendarCard from '../components/CalendarCard';
 import TenantCard from '../components/TenantCard';
+import Maintenance from '../components/Maintenance';
 
 // Assets
 import notifImage from '../../../../assets/images/notification.png';
