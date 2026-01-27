@@ -3,8 +3,6 @@ import MainLayout from "./MainLayout";
 
 export default function App() {
   return (
-    <NavigationContainer>
       <MainLayout />
-    </NavigationContainer>
   );
 }

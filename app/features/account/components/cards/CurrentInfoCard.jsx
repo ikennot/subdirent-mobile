@@ -42,7 +42,7 @@ export default function CurrentInfoCard(props) {
 const styles = StyleSheet.create({
     container: {
         // 2. Change * 90 to * 0.9 (to get 90% of the screen width)
-        width: screenWidth * 0.8, 
+        width: screenWidth * 0.9, 
         height: 150,
         backgroundColor: '#e1f2ff',
         borderRadius: 10,
@@ -101,7 +101,7 @@ const styles = StyleSheet.create({
   ShitLine:{
        position: "absolute",
       top: 15,
-      right: 145,
+      right: 170,
       height:120
   }
 });

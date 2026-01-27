@@ -29,7 +29,7 @@ export default function Infos(props) {
 
 const styles = StyleSheet.create({
   container: {
-    width: screenWidth * 0.8,
+    width: screenWidth * 0.9,
     height: 200,
     backgroundColor: '#F9FDFF',
     elevation: 2,

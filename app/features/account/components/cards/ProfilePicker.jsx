@@ -17,7 +17,7 @@ export default function ProfilePicker(){
 
 const styles = StyleSheet.create({
     container: {
-    width: screenWidth *0.8,
+    width: screenWidth *0.9,
     height: 40,
         justifyContent:'space-between',
     alignItems:'center',
