@@ -25,6 +25,17 @@ export const Colors = {
     textSecondary: '#545050',  // Subtitles
     textGrey: '#BDB1B1',       // Light Grey Text
     buttonText: '#FFFFFF',     // White Text on Buttons
+    
+    // Additional colors for UI elements
+    dark: '#1C1C1E',           // Dark backgrounds, borders
+    mediumGrey: '#666',        // Medium grey text
+    lightGrey: '#888',         // Light grey text
+    extraLightGrey: '#999',    // Extra light grey
+    border: '#E0E0E0',         // Borders
+    borderLight: '#EAEAEA',    // Light borders
+    divider: '#f5f5f5',        // Divider lines
+    overlay: '#FAFAFA',        // Overlay backgrounds
+    dividerLight: '#eee',      // Light divider
   },
   dark: {
     text: '#ECEDEE',
