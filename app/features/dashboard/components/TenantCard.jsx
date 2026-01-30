@@ -10,11 +10,17 @@ export default function TenantCard({ tenantName, propertyAddress, onpress }) {
 
   return (
     <View style={styles.card}>
-      <Text style={styles.label}>{tenantName}</Text>
-      
       <View style={styles.row}>
-        <Text style={styles.address}>{propertyAddress}</Text>
-        <Image source={houseImage} style={{ width: 40, height: 40, resizeMode: 'contain' }} />
+        <View style={{ flex: 1, marginRight: 10 }}>
+          <Text style={styles.label}>{tenantName}</Text>
+          <Text style={styles.address}>{propertyAddress}</Text>
+        </View>
+        
+        {/* Static House Icon */}
+        <Image 
+          source={houseImage} 
+          style={{ width: 40, height: 40, resizeMode: 'contain' }} 
+        />
       </View>
 
       <Animated.View style={{ opacity: buttonOpacity }}>
@@ -72,5 +78,18 @@ const styles = StyleSheet.create({
     color: Colors.light.buttonText,
     fontWeight: '600',
     fontSize: 12
+  }
+  ,
+  topRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 12
+  },
+  avatar: {
+    width: 52,
+    height: 52,
+    borderRadius: 26,
+    marginRight: 12,
+    backgroundColor: Colors.light.cardBg
   }
 });
