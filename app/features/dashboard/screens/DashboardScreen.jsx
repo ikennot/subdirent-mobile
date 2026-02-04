@@ -11,7 +11,7 @@ import Maintenance from '../components/Maintenance';
 import NotificationModal from '../components/NotificationModal';
 import RecentPayments from '../components/RecentPayments';
 import TenantCard from '../components/TenantCard';
-import Maintenance from '../components/Maintenance';
+
 
 
 export default function DashboardScreen() {
