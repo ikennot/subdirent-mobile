@@ -13,6 +13,7 @@ import RecentPayments from '../components/RecentPayments';
 import TenantCard from '../components/TenantCard';
 
 
+
 export default function DashboardScreen() {
   const [modalVisible, setModalVisible] = useState(false);
   const [selectedDate, setSelectedDate] = useState(new Date());
