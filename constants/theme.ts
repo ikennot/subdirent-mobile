@@ -16,6 +16,26 @@ export const Colors = {
     icon: '#687076',
     tabIconDefault: '#687076',
     tabIconSelected: tintColorLight,
+
+    primaryDark: '#0A2540',    // Dark Blue (Header, Selected Dates)
+    primaryMedium: '#0D3B66',  // Medium Blue
+    primaryLight: '#5AB8F0',   // Light Blue (Buttons)
+    cardBg: '#FFFFFF',         // White Card Background
+    cardBgSecondary: '#EAF8FF',// Light Blue Card Background
+    textSecondary: '#545050',  // Subtitles
+    textGrey: '#BDB1B1',       // Light Grey Text
+    buttonText: '#FFFFFF',     // White Text on Buttons
+    
+    // Additional colors for UI elements
+    dark: '#1C1C1E',           // Dark backgrounds, borders
+    mediumGrey: '#666',        // Medium grey text
+    lightGrey: '#888',         // Light grey text
+    extraLightGrey: '#999',    // Extra light grey
+    border: '#E0E0E0',         // Borders
+    borderLight: '#EAEAEA',    // Light borders
+    divider: '#f5f5f5',        // Divider lines
+    overlay: '#FAFAFA',        // Overlay backgrounds
+    dividerLight: '#eee',      // Light divider
   },
   dark: {
     text: '#ECEDEE',
@@ -24,7 +44,21 @@ export const Colors = {
     icon: '#9BA1A6',
     tabIconDefault: '#9BA1A6',
     tabIconSelected: tintColorDark,
+
+    primaryDark: '#fff',
+    primaryMedium: '#ccc',
+    primaryLight: '#333',
+    cardBg: '#000',
+    cardBgSecondary: '#111',
+    textSecondary: '#ccc',
+    textGrey: '#666',
+    buttonText: '#000',
   },
+  status:{
+    warning: '#E4B004',        
+    success: '#06F316',        
+    danger: '#F50A0A',         
+  }
 };
 
 export const Fonts = Platform.select({

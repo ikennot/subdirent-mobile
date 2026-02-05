@@ -1,19 +1,7 @@
-import { StyleSheet, Text, View } from 'react-native';
-
-const Home = () => {
-  return (
-    <View style={styles.container}>
-      <Text>Subdirent</Text>
-    </View>
-  );
-};
-
-export default Home;
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-});
+import MainLayout from "./MainLayout";
+import App from './App.jsx'
+// This file is the ENTRY SCREEN for Expo Router
+// Whatever you export here becomes the first screen
+export default function Index() {
+  return <App />;
+}

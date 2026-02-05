@@ -1,0 +1,64 @@
+- PR TITLE: Feat: Account and Authentication
+- What's new in this PR
+
+    - Quick Setup (for backend developers and if and only if applicable to frontend developers)
+        - No special setup is required.
+
+    - TL;DR
+        - This PR introduces new features and UI improvements for the Account and Authentication sections of the application. It includes the implementation of the logout functionality, security settings, profile picker, and the forgot password screen.
+
+    - Summary
+        - `e97e199` - Done with Logout (UI only)
+        - `ea04500` - Done with security settings
+        - `0f6fd6b` - Done with profile picker
+        - `88a83ea` - add expo-image-picker
+        - `45a500a` - add expo-document-picker
+        - `ac59d83` - personal info done (no useState)
+        - `2e0cde0` - button
+        - `2181e1b` - add button to Account components
+        - `0ddca40` - Personal information form but no buttons yet
+        - `843e564` - Create UnderLinedInput.jsx
+        - `bf8e3b8` - initial info card design
+        - `54c9d6d` - add some margins
+        - `dce9f6a` - modify index.jsx
+        - `c1165a1` - Done with CurrentInfoCard
+        - `4523db8` - add asset shitLine
+        - `3f93558` - add profile picture asset
+        - `2db7e0f` - Done currentUnit header
+        - `aaec703` - add asset
+        - `7678251` - initial view container
+        - `8c41e10` - testing the Account card with sample text
+        - `832b7fb` - add some assets and some file components
+        - `cc136c3` - Merge pull request #8 from ikennot/feat-forgot-pword
+        - `b0b84bb` - done UI of forgot Password
+        - `9fee12f` - add labels ang text in forgotPassword
+        - `b76c141` - add route to navigate ForgotPasswordScreen
+        - `d65c0c7` - Merge pull request #6 from ikennot/feat-login
+        - `28064b5` - Layout done
+        - `a1ecc29` - initial design
+        - `2b24513` - import components
+        - `f0ab7f1` - Merge pull request #2 from ikennot/feat/folder-structuring
+        - `c6ba317` - create modular folder structure (2)
+        - `b34222d` - create modular folder structure
+        - `ded5bff` - subdirent intialization
+        - `ac39150` - Initial commit
+
+    - Key Features
+        - Logout functionality (UI only)
+        - Security settings UI
+        - Profile picture picker
+        - Forgot password screen and navigation
+        - Personal information form UI
+        - Modular folder structure
+
+    - Technical Changes
+        - Added `expo-image-picker` and `expo-document-picker`
+        - Created several new components, including `UnderlinedInput`, `CurrentInfoCard`, and various buttons.
+        - Implemented navigation for the forgot password screen.
+        - Restructured the project with a modular folder structure.
+
+    - Checklist
+        - [x] Code follows the project's coding style.
+        - [x] All new and existing tests passed.
+        - [x] The feature is working as expected.
+        - [x] The PR has been reviewed by at least one other developer.
