@@ -1,11 +1,12 @@
-import AppNavigator from "./navigation/components/AppNavigator";
-import { View, StyleSheet } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { StyleSheet, View } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 import Account from "./features/account/screens/Account";
 import DashboardScreen from "./features/dashboard/screens/DashboardScreen";
 import MissingScreen from "./features/MissingScreen";
-import { SafeAreaView } from "react-native-safe-area-context";
-import PaymentScreen from "./features/payments/screens/PaymentScreen"
+import PaymentScreen from "./features/payments/screens/PaymentScreen";
+import PropertyScreen from "./features/property/screens/PropertyScreen";
+import AppNavigator from "./navigation/components/AppNavigator";
 const Tab = createBottomTabNavigator();
 
 export default function MainLayout() {
@@ -22,7 +23,7 @@ export default function MainLayout() {
           )}
         >
           <Tab.Screen name="Dashboard" component={DashboardScreen} />
-          <Tab.Screen name="Property" component={MissingScreen} />
+          <Tab.Screen name="Property" component={PropertyScreen} />
           <Tab.Screen name="Payments" component={PaymentScreen} />
           <Tab.Screen name="Maintenance" component={MissingScreen} />
           <Tab.Screen name="Account" component={Account} />
